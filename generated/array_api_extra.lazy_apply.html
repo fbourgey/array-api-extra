@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="array_api_extra.testing.lazy_xp_function" href="array_api_extra.testing.lazy_xp_function.html"><link rel="prev" title="Tools for lazy backends" href="../api-lazy.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="testing.lazy_xp_function" href="array_api_extra.testing.lazy_xp_function.html"><link rel="prev" title="Tools for lazy backends" href="../api-lazy.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>array_api_extra.lazy_apply - array-api-extra 0.10.2.dev0 documentation</title>
+        <title>lazy_apply - array-api-extra 0.11.2.dev0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -162,7 +162,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">array-api-extra 0.10.2.dev0 documentation</div></a>
+      <a href="../index.html"><div class="brand">array-api-extra 0.11.2.dev0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -183,7 +183,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
-  <span class="sidebar-brand-text">array-api-extra 0.10.2.dev0 documentation</span>
+  <span class="sidebar-brand-text">array-api-extra 0.11.2.dev0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -193,37 +193,86 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">array-api-extra</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference.html">API Reference</a><input aria-label="Toggle navigation of API Reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.apply_where.html">array_api_extra.apply_where</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.argpartition.html">array_api_extra.argpartition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.at.html">array_api_extra.at</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.atleast_nd.html">array_api_extra.atleast_nd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.broadcast_shapes.html">array_api_extra.broadcast_shapes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.cov.html">array_api_extra.cov</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.create_diagonal.html">array_api_extra.create_diagonal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.default_dtype.html">array_api_extra.default_dtype</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.expand_dims.html">array_api_extra.expand_dims</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.isclose.html">array_api_extra.isclose</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.isin.html">array_api_extra.isin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.kron.html">array_api_extra.kron</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.nan_to_num.html">array_api_extra.nan_to_num</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.nunique.html">array_api_extra.nunique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.one_hot.html">array_api_extra.one_hot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.pad.html">array_api_extra.pad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.partition.html">array_api_extra.partition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.setdiff1d.html">array_api_extra.setdiff1d</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.sinc.html">array_api_extra.sinc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.union1d.html">array_api_extra.union1d</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../api-reference.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-creation.html">Creation Functions</a><input aria-label="Toggle navigation of Creation Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.create_diagonal.html">create_diagonal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.one_hot.html">one_hot</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../api-lazy.html">Tools for lazy backends</a><input aria-label="Toggle navigation of Tools for lazy backends" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">array_api_extra.lazy_apply</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.testing.lazy_xp_function.html">array_api_extra.testing.lazy_xp_function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="array_api_extra.testing.patch_lazy_xp_functions.html">array_api_extra.testing.patch_lazy_xp_functions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-elementwise.html">Element-wise Functions</a><input aria-label="Toggle navigation of Element-wise Functions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.angle.html">angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.apply_where.html">apply_where</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.deg2rad.html">deg2rad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.isclose.html">isclose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.nan_to_num.html">nan_to_num</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.rad2deg.html">rad2deg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.sinc.html">sinc</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-indexing.html">Indexing Functions</a><input aria-label="Toggle navigation of Indexing Functions" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.at.html">at</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.diag_indices.html">diag_indices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.tril_indices.html">tril_indices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.triu_indices.html">triu_indices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.unravel_index.html">unravel_index</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-inspection.html">Inspection</a><input aria-label="Toggle navigation of Inspection" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.default_dtype.html">default_dtype</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-linalg.html">Linear algebra Functions</a><input aria-label="Toggle navigation of Linear algebra Functions" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.kron.html">kron</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-manipulation.html">Manipulation Functions</a><input aria-label="Toggle navigation of Manipulation Functions" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.atleast_nd.html">atleast_nd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.broadcast_shapes.html">broadcast_shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.expand_dims.html">expand_dims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.pad.html">pad</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-searching.html">Searching Functions</a><input aria-label="Toggle navigation of Searching Functions" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.searchsorted.html">searchsorted</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-set.html">Set Functions</a><input aria-label="Toggle navigation of Set Functions" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.isin.html">isin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.nunique.html">nunique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.setdiff1d.html">setdiff1d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.union1d.html">union1d</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-sorting.html">Sorting Functions</a><input aria-label="Toggle navigation of Sorting Functions" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.argpartition.html">argpartition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.partition.html">partition</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-statistical.html">Statistical Functions</a><input aria-label="Toggle navigation of Statistical Functions" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.cov.html">cov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.nanmax.html">nanmax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.nanmin.html">nanmin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.nansum.html">nansum</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api-testing.html">Testing utilities (<code class="docutils literal notranslate"><span class="pre">xpx.testing</span></code>)</a><input aria-label="Toggle navigation of Testing utilities (xpx.testing)" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.testing.assert_close.html">testing.assert_close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.testing.assert_close_nulp.html">testing.assert_close_nulp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.testing.assert_equal.html">testing.assert_equal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.testing.assert_less.html">testing.assert_less</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../api-lazy.html">Tools for lazy backends</a><input aria-label="Toggle navigation of Tools for lazy backends" checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">lazy_apply</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.testing.lazy_xp_function.html">testing.lazy_xp_function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array_api_extra.testing.patch_lazy_xp_functions.html">testing.patch_lazy_xp_functions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library-design.html">Library Design</a></li>
 </ul>
 
 </div>
@@ -244,12 +293,12 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="https://github.com/data-apis/array-api-extra/blob/main/docs/generated/array_api_extra.lazy_apply.rst?plain=true" title="View this page">
+  <a class="muted-link" href="https://github.com/data-apis/array-api-extra/blob/main/src/array_api_extra/_lazy.py?plain=true" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
 </div><div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/data-apis/array-api-extra/edit/main/docs/generated/array_api_extra.lazy_apply.rst" rel="edit" title="Edit this page">
+  <a class="muted-link" href="https://github.com/data-apis/array-api-extra/edit/main/src/array_api_extra/_lazy.py" rel="edit" title="Edit this page">
     <svg><use href="#svg-pencil"></use></svg>
     <span class="visually-hidden">Edit this page</span>
   </a>
@@ -266,8 +315,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="array-api-extra-lazy-apply">
-<h1>array_api_extra.lazy_apply<a class="headerlink" href="#array-api-extra-lazy-apply" title="Link to this heading">¶</a></h1>
+          <section id="lazy-apply">
+<h1>lazy_apply<a class="headerlink" href="#lazy-apply" title="Link to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_extra.lazy_apply">
 <span class="sig-prename descclassname"><span class="pre">array_api_extra.</span></span><span class="sig-name descname"><span class="pre">lazy_apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_numpy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_extra.lazy_apply" title="Link to this definition">¶</a></dt>
@@ -278,7 +327,7 @@ function is executed immediately.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>func</strong> (<em>callable</em>) – <p>The function to apply.</p>
+<li><p><strong>func</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.ParamSpec" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpec</span></code></a>(<code class="docutils literal notranslate"><span class="pre">P</span></code>, bound= <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)], <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>]]</span>) – <p>The function to apply.</p>
 <p>It must accept one or more array API compliant arrays as positional arguments.
 If <cite>as_numpy=True</cite>, inputs are converted to NumPy before they are passed to
 <cite>func</cite>.
@@ -286,25 +335,25 @@ It must return either a single array-like or a sequence of array-likes.</p>
 <p><cite>func</cite> must be a pure function, i.e. without side effects, as depending on the
 backend it may be executed more than once or never.</p>
 </p></li>
-<li><p><strong>*args</strong> (<em>Array</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.14)"><em>complex</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>) – <p>One or more Array API compliant arrays, Python scalars, or None’s.</p>
-<p>If <cite>as_numpy=True</cite>, you need to be able to apply <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asarray.html#numpy.asarray" title="(in NumPy v2.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.asarray()</span></code></a> to
+<li><p><strong>*args</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – <p>One or more Array API compliant arrays, Python scalars, or None’s.</p>
+<p>If <cite>as_numpy=True</cite>, you need to be able to apply <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asarray.html#numpy.asarray" title="(in NumPy v2.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.asarray()</span></code></a> to
 non-None args to convert them to NumPy; read notes below about specific
 backends.</p>
 </p></li>
-<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em><em>, </em><em>...</em><em>] </em><em>| </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em><em>, </em><em>...</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Output shape or sequence of output shapes, one for each output of <cite>func</cite>.
+<li><p><strong>shape</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>]] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Output shape or sequence of output shapes, one for each output of <cite>func</cite>.
 Default: assume single output and broadcast shapes of the input arrays.</p></li>
-<li><p><strong>dtype</strong> (<em>DType</em><em> | </em><em>Sequence</em><em>[</em><em>DType</em><em>]</em><em>, </em><em>optional</em>) – Output dtype or sequence of output dtypes, one for each output of <cite>func</cite>.
+<li><p><strong>dtype</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Output dtype or sequence of output dtypes, one for each output of <cite>func</cite>.
 dtype(s) must belong to the same array namespace as the input arrays.
 Default: infer the result type(s) from the input arrays.</p></li>
-<li><p><strong>as_numpy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – <dl class="simple">
+<li><p><strong>as_numpy</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – <dl class="simple">
 <dt>If True, convert the input arrays to NumPy before passing them to <cite>func</cite>.</dt><dd><p>This is particularly useful to make NumPy-only functions, e.g. written in Cython</p>
 </dd>
 <dt>or Numba, work transparently with array API-compliant arrays.</dt><dd><p>Default: False.</p>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>xp</strong> (<em>array_namespace</em><em>, </em><em>optional</em>) – The standard-compatible namespace for <cite>args</cite>. Default: infer.</p></li>
-<li><p><strong>**kwargs</strong> (<em>Any</em><em>, </em><em>optional</em>) – Additional keyword arguments to pass verbatim to <cite>func</cite>.
+<li><p><strong>xp</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/types.html#types.ModuleType" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleType</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – The standard-compatible namespace for <cite>args</cite>. Default: infer.</p></li>
+<li><p><strong>**kwargs</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.ParamSpecKwargs" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParamSpecKwargs</span></code></a></span>) – Additional keyword arguments to pass verbatim to <cite>func</cite>.
 They cannot contain Array objects.</p></li>
 </ul>
 </dd>
@@ -315,7 +364,7 @@ If shape is omitted or a single <cite>tuple[int | None, …]</cite>, return a si
 Otherwise, return a tuple of arrays.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Array | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[Array, …]</p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html#Ellipsis" title="(in Python v3.14)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a>]</span></p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -339,7 +388,7 @@ transfer.</p>
 arrays on a GPU device to NumPy.</p>
 </dd>
 <dt>Sparse</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">as_numpy=True</span></code>, by default sparse prevents implicit densification through
-<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asarray.html#numpy.asarray" title="(in NumPy v2.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.asarray()</span></code></a>. <a class="reference external" href="https://sparse.pydata.org/en/stable/operations.html#package-configuration">This safety mechanism can be disabled</a>.</p>
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asarray.html#numpy.asarray" title="(in NumPy v2.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.asarray()</span></code></a>. <a class="reference external" href="https://sparse.pydata.org/en/stable/operations.html#package-configuration">This safety mechanism can be disabled</a>.</p>
 </dd>
 <dt>Dask</dt><dd><p>This allows applying eager functions to Dask arrays.
 The Dask graph won’t be computed until the user calls <code class="docutils literal notranslate"><span class="pre">compute()</span></code> or
@@ -396,7 +445,7 @@ again by Dask.</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">array_api_extra.testing.lazy_xp_function</div>
+                <div class="title">testing.lazy_xp_function</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -448,7 +497,7 @@ again by Dask.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">array_api_extra.lazy_apply</a><ul>
+<li><a class="reference internal" href="#">lazy_apply</a><ul>
 <li><a class="reference internal" href="#array_api_extra.lazy_apply"><code class="docutils literal notranslate"><span class="pre">lazy_apply()</span></code></a></li>
 </ul>
 </li>
@@ -461,7 +510,7 @@ again by Dask.</p>
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=529e2ce1"></script>
+</div><script src="../_static/documentation_options.js?v=2e52866e"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

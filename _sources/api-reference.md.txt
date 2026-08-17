@@ -1,29 +1,18 @@
 # API Reference
 
-```{eval-rst}
-.. currentmodule:: array_api_extra
-.. autosummary::
-    :nosignatures:
-    :toctree: generated
+```{toctree}
+:maxdepth: 2
 
-    apply_where
-    argpartition
-    at
-    atleast_nd
-    broadcast_shapes
-    cov
-    create_diagonal
-    default_dtype
-    expand_dims
-    isclose
-    isin
-    kron
-    nan_to_num
-    nunique
-    one_hot
-    pad
-    partition
-    setdiff1d
-    sinc
-    union1d
+api-creation.md
+api-elementwise.md
+api-indexing.md
+api-inspection.md
+api-linalg.md
+api-manipulation.md
+api-searching.md
+api-set.md
+api-sorting.md
+api-statistical.md
+api-testing.md
+api-lazy.md
 ```
